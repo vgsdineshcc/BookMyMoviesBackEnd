@@ -1,0 +1,7 @@
+package com.example.demo;
+
+public class QueueOperation {
+public static void main(String[] args) {
+	
+}
+}

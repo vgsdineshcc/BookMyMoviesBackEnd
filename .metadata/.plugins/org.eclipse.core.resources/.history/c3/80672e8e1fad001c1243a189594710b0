@@ -1,0 +1,57 @@
+package com.example.demo;
+
+import java.util.Scanner;
+
+public class LockersPvtLtd {
+	
+	public void addFile()
+	{
+		System.out.println("addFile");
+	}
+	
+	public void searchFile()
+	{
+		System.out.println("searchFile");
+	}
+	
+	public void deleteFile()
+	{
+		System.out.println("deleteFile");
+	}
+	
+	public void selectOption()
+	{
+		Scanner scanner = new Scanner(System.in);		
+		System.out.println("Select 1 to add File");
+		System.out.println("Select 2 to Search File");
+		System.out.println("Select 3 to Delete File");
+		System.out.println("Select 4 to Delete File");
+		int option = scanner.nextInt();
+		LockersPvtLtd lockersPvtLtd = new LockersPvtLtd();
+		
+		if(option == 1)
+		{
+		addFile();
+		lockersPvtLtd.selectOption();
+		}
+		if(option == 2)
+		{
+			searchFile();
+			lockersPvtLtd.selectOption();
+		}
+		if(option == 3)
+		{
+			deleteFile();
+			lockersPvtLtd.selectOption();
+		}
+		
+	}
+	
+public static void main(String[] args) {
+	
+	LockersPvtLtd lockersPvtLtd = new LockersPvtLtd();
+	lockersPvtLtd.selectOption();
+	
+	
+}
+}

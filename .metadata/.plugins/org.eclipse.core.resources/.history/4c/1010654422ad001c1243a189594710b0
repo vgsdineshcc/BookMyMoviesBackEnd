@@ -1,0 +1,87 @@
+package com.example.demo;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.util.Scanner;
+
+public class LockersPvtLtd {
+	
+	FileOutputStream fileOutputStream;
+	FileInputStream fileInputStream;
+	Scanner scanner = new Scanner(System.in);	
+	
+	public void addFile()
+	{
+		System.out.println("Please enter the File name");
+		String fileName = scanner.next();
+		File fi = new File(fileName);
+		if(fi.exists())
+		{
+			System.out.println("File Already Found Please try another filename");
+		}
+		else
+		{
+			System.out.println("File Added");
+		}
+		//System.out.println("addFile");
+	}
+	
+	public void searchFile()
+	{
+		System.out.println("searchFile");
+	}
+	
+	public void deleteFile()
+	{
+		System.out.println("deleteFile");
+	}
+	
+	public void selectOption()
+	{
+			
+		System.out.println("Enter 1 Option to add a user specified file to the application");
+		System.out.println("Enter 2 Option to search a user specified file from the application");
+		System.out.println("Enter 3 Option to delete a user specified file from the application");
+		System.out.println("Enter 4 option to close the current execution context and return to the main contex");
+		int option = scanner.nextInt();
+		LockersPvtLtd lockersPvtLtd = new LockersPvtLtd();
+		
+		if(option == 1)
+		{
+		addFile();
+		lockersPvtLtd.selectOption();
+		}
+		if(option == 2)
+		{
+			searchFile();
+			lockersPvtLtd.selectOption();
+		}
+		if(option == 3)
+		{
+			deleteFile();
+			lockersPvtLtd.selectOption();
+		}
+		if(option == 3)
+		{
+			lockersPvtLtd.selectOption();
+		}
+		if(option == 3)
+		{
+			lockersPvtLtd.selectOption();
+		}
+		if(option == 4)
+		{
+			lockersPvtLtd.selectOption();
+		}
+		
+	}
+	
+public static void main(String[] args) {
+	
+	LockersPvtLtd lockersPvtLtd = new LockersPvtLtd();
+	lockersPvtLtd.selectOption();
+	
+	
+}
+}

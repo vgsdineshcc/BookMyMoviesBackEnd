@@ -1,0 +1,22 @@
+package com.example.demo;
+
+public class ExceptionHandling {
+	
+	private void lowBalanceException(int balance) throws UserDefindException 
+	{
+		int currentBalance = 2000;
+		if (currentBalance>balance)
+		{
+		}
+		else 
+		{
+			String exception = String.valueOf(throw new UserDefindException("You have low Balance Please try again"));
+		}
+	}
+	
+	public static void main(String[] args) throws UserDefindException {
+		ExceptionHandling exceptionHandling = new ExceptionHandling();
+		//exceptionHandling.exceptionMethod();
+		exceptionHandling.lowBalanceException(3000);
+	}
+}

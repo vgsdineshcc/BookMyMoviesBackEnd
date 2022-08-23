@@ -1,0 +1,34 @@
+package com.example.demo;
+
+public class LockersPvtLtd {
+	
+	public void addFile()
+	{
+		System.out.println("addFile");
+	}
+	
+	public void searchFile()
+	{
+		System.out.println("searchFile");
+	}
+	
+	public void deleteFile()
+	{
+		System.out.println("deleteFile");
+	}
+	
+	public void selectOption(int i)
+	{
+		addFile();
+		searchFile();
+		deleteFile();
+	}
+	
+public static void main(String[] args) {
+	
+	
+	LockersPvtLtd lockersPvtLtd = new LockersPvtLtd();
+	
+	
+}
+}

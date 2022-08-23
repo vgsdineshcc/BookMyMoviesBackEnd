@@ -1,0 +1,50 @@
+package com.example.demo;
+
+import java.util.Scanner;
+
+public class Sample {
+	
+	static int solve(char grid[][]){
+        int ans=0;
+        for(int i=0;i<grid.length;i++){
+            int counts=0;
+            for(int j=0;j<grid[i].length;j++){
+                if(grid[i][j]=='#'){
+                    counts++;
+                }
+            }
+            ans=Math.max(ans,counts);
+        }
+        return ans;
+    }
+
+	
+		 
+		 
+		    public static void main(String args[] ) throws Exception {
+		        Scanner cin=new Scanner(System.in);
+		        int t=cin.nextInt();
+		 
+		        while(t-->0){
+		            int n=cin.nextInt();
+		            int m=cin.nextInt();
+		 
+		            char grid[][]=new char[n][m];
+		            for(int i=0;i<n;i++){
+		                String s=cin.next();
+		                int k=0;
+		                for(int j=0;j<m;j++){
+		                    grid[i][j]=s.charAt(k);
+		                    k++;
+		                }
+		            }
+		           // cin.nextLine();
+		 
+		            System.out.println(solve(grid));
+		        }
+		        cin.close();
+		    }
+		
+	}
+	
+

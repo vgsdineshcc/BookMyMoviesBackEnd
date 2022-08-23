@@ -1,0 +1,46 @@
+package com.example.demo;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileSample {
+
+	public static void main(String[] args) throws IOException {
+	String s="hi \\ how are u";
+	
+	System.out.print(s.split("'\'"));
+	String[] s2 = s.split("'\'");
+	System.out.print(s2[0]);
+	
+	//Byte
+	/*
+	 * FileOutputStream fos=new FileOutputStream("a.txt",true); byte
+	 * b[]=s.getBytes(); fos.write(b);
+	 * System.out.println("data has been put into the file"); FileInputStream
+	 * fis=new FileInputStream("a.txt"); int i=0; while((i=fis.read())!=-1) {
+	 * System.out.print((char)i); }
+	 * 
+	 * //fis.close(); fos.close();
+	 * 
+	 * FileInputStream fis2=new FileInputStream("a.txt"); int i1=0; StringBuffer str
+	 * = new StringBuffer(); while((i1=fis2.read())!=-1) {
+	 * System.out.print((char)i1); str=str.append((char)i1); }
+	 * 
+	 * fis.close();
+	 * 
+	 * String str2 = str.toString();
+	 * 
+	 * FileOutputStream fos2=new FileOutputStream("b.txt",true); byte
+	 * b1[]=str2.getBytes(); fos2.write(b1);
+	 * System.out.println("data has been put into the file");
+	 * 
+	 * fis2.close(); fos2.close();
+	 */
+	
+	
+	
+	}
+	
+}

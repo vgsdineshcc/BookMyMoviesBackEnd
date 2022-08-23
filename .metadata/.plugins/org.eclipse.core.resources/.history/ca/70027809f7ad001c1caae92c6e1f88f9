@@ -1,0 +1,54 @@
+package com.example.demo;
+
+import java.util.Scanner;
+
+public class QueueOperation {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter the size of the queue");
+	int size=sc.nextInt();
+	int queue[]=new int[size];
+	int rear=-1,front=-1;
+	System.out.println("queue opertions");
+	while(true) {
+		System.out.println("enter your choice 1.enqueue 2.dequeue 3.display 4.exit");
+		int choice=sc.nextInt();
+		switch(choice) {
+		case 1:if(rear==size-1) {
+			System.out.println("queue is full no more insertion");
+		}
+		else {
+			System.out.println("enter the element");
+			int ele=sc.nextInt();
+			rear=rear+1;
+			queue[rear]=ele;
+			front=0;
+		}
+		break;
+		case 2:if(front>rear||(front==-1&&rear==-1)) {
+			System.out.println("queue cannot be deleted further");
+		}
+		else {
+			front=front+1;
+		}
+		break;
+		case 3:if(front>rear||(front==-1&&rear==-1)) {
+			System.out.println("queue cannot be deleted further");
+		}else {
+			for(int i=front;i<=rear;i++) {
+				System.out.println(queue[i]);
+				
+			}
+		}
+		break;
+		case 4:System.exit(0);
+		break;
+		default:System.out.println("check the option and retry");
+		break;
+		}
+	}
+	
+	
+
+}
+}

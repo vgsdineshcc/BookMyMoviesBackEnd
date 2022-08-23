@@ -1,0 +1,42 @@
+package com.example.demo;
+
+import java.util.Scanner;
+
+public class LockersPvtLtd {
+	
+	public void addFile()
+	{
+		System.out.println("addFile");
+	}
+	
+	public void searchFile()
+	{
+		System.out.println("searchFile");
+	}
+	
+	public void deleteFile()
+	{
+		System.out.println("deleteFile");
+	}
+	
+	public void selectOption()
+	{
+		Scanner scanner = new Scanner(System.in);
+		int option = scanner.nextInt()
+		addFile();
+		searchFile();
+		deleteFile();
+	}
+	
+public static void main(String[] args) {
+	
+	
+	LockersPvtLtd lockersPvtLtd = new LockersPvtLtd();
+	
+	while (true) {
+		lockersPvtLtd.selectOption();
+	}
+	
+	
+}
+}

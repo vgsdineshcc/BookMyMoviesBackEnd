@@ -1,0 +1,99 @@
+package com.example.demo;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class LockersPvtLtd {
+	
+	FileOutputStream fileOutputStream;
+	FileInputStream fileInputStream;
+	Scanner scanner = new Scanner(System.in);	
+	
+	public void addFile() throws IOException
+	{
+		System.out.println("Please enter the File name");
+		String fileName = scanner.next();
+		File fi = new File(fileName);
+		if(fi.exists())
+		{
+			System.out.println("File Already Found Please try another filename");
+		}
+		else
+		{
+			fi.createNewFile();
+			System.out.println("File Added");
+		}
+		//1System.out.println("addFile");
+	}
+	
+	public void searchFile()
+	{
+		System.out.println("searchFile");
+	}
+	
+	public void deleteFile()
+	{
+		System.out.println("deleteFile");
+	}
+	
+	public void closeApplication() throws IOException
+	{
+		//LockersPvtLtd lockersPvtLtd = new LockersPvtLtd(false);	
+		System.exit(0);
+		System.out.println("Closed the Application");
+		return false;
+	}
+	
+	public void selectOption() throws IOException
+	{
+		System.out.println("Enter 1 Option to add a user specified file to the application");
+		System.out.println("Enter 2 Option to search a user specified file from the application");
+		System.out.println("Enter 3 Option to delete a user specified file from the application");
+		System.out.println("Enter 4 option to close the current execution context and return to the main context");
+		System.out.println("Enter 5 Option to close the application");
+		int option = scanner.nextInt();
+		switch (option) {
+		case 1:
+			addFile();
+			break;
+		case 2:
+			searchFile();
+			break;
+		case 3:
+			deleteFile();
+			break;
+		case 4:
+			System.out.println("close the current execution context and return to the main context");
+			break;
+		case 5:
+			closeApplication();
+			break;
+
+		default:
+			System.out.println("Select the Correct Option");
+			break;
+		}	
+	}
+	
+	LockersPvtLtd(boolean b) throws IOException
+	{
+		LockersPvtLtd lockersPvtLtd = new LockersPvtLtd();
+		System.out.println(b);
+		while (b) {
+			System.out.println(b);
+			lockersPvtLtd.selectOption();
+		}
+	}
+	
+	LockersPvtLtd()
+	{
+		
+	}
+	
+public static void main(String[] args) throws IOException {
+	LockersPvtLtd lockersPvtLtd = new LockersPvtLtd(true);
+}
+}
